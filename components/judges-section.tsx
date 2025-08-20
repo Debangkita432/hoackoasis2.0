@@ -25,11 +25,40 @@ type PersonBase = {
 }
 
 export default function JudgesSection() {
+  // Judges (with your real LinkedIn links)
   const judges: PersonBase[] = [
-    { name: "ABC", title: "ABC", company: "ABC", image: "/comingsoon.png", linkedin: "#" },
-    { name: "ABC", title: "ABC", company: "ABC", image: "/comingsoon.png", linkedin: "#" },
-    { name: "ABC", title: "ABC", company: "ABC", image: "/comingsoon.png", linkedin: "#" },
-    { name: "ABC", title: "ABC", company: "ABC", image: "/comingsoon.png", linkedin: "#" },
+    {
+      name: "Rahul Saha",
+      title: "Judge",
+      company: "Associate Principal – Data Sciences at LTIMindtree",
+      image: "/rahul.png",
+      linkedin:
+        "https://www.linkedin.com/in/rahul-saha5/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      name: "Pinaki Karuri",
+      title: "Judge",
+      company: "Manager(Projects) of General Insurance Application at cognizant",
+      image: "/pinaki.png",
+      linkedin:
+        "https://www.linkedin.com/in/pinaki-karuri-b3a62b1a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      name: "Sourav K Chatterjee",
+      title: "Judge",
+      company: "Senior Manager & Delivery Lead, Solution Architect at accenture",
+      image: "/sourav.png",
+      linkedin:
+        "https://www.linkedin.com/in/souravkchatterjee777/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      name: "Arpan Singha",
+      title: "Judge",
+      company: "Engagement Delivery Lead (CG, Travel & Hospitality) at Cognizant",
+      image: "/arpan.png",
+      linkedin:
+        "https://www.linkedin.com/in/arpan-singha-itil-%C2%AE-certified-agile-pm-safe%C2%AE-35a80368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ]
 
   const mentors: PersonBase[] = [
@@ -49,7 +78,22 @@ export default function JudgesSection() {
     },
   ]
 
-  const facultyCoordinators: PersonBase[] = [
+  // Faculty Team (Chief Patron → Patron → Coordinator → Coordinator)
+  const facultyTeam: PersonBase[] = [
+    {
+      name: "Prof. Dr. Satyajit Chakrabarti",
+      title: "Chief Patron",
+      company: "Director of IEM",
+      image: "/satyajit sir.jpeg",
+      linkedin: "https://www.linkedin.com/in/csatyajit/",
+    },
+    {
+      name: "Prof. Dr. Moutushi Singh",
+      title: "Patron",
+      company: "HOD of IEM",
+      image: "/moutushi.png",
+      linkedin: "https://www.linkedin.com/in/dr-moutushi-singh-bb295b6a/",
+    },
     {
       name: "Prof.Subhabrata Sengupta",
       title: "Faculty Coordinator",
@@ -158,7 +202,6 @@ export default function JudgesSection() {
     return () => window.removeEventListener("resize", onResize)
   }, [])
 
-  const facultyToRender = isPhone ? facultyCoordinators.slice(0, 2) : facultyCoordinators
   const mentorsToRender = isPhone ? mentors.slice(0, 2) : mentors
   const coreToRender = isPhone ? coordinators.slice(0, 15) : coordinators
 
@@ -173,7 +216,6 @@ export default function JudgesSection() {
     person,
     index,
     showCompany = true,
-    // smaller on phones, larger from sm+
     avatarClass = "w-28 h-28 sm:w-36 sm:h-36",
   }: PersonCardProps) => {
     const cardRef = useRef<HTMLDivElement>(null)
@@ -306,19 +348,19 @@ export default function JudgesSection() {
           </div>
         </div>
 
-        {/* Faculty */}
+        {/* Faculty Team */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white glow-text-purple">
-              Faculty Coordinators
+              Faculty Team
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-              Academic leaders supporting and guiding the hackathon
+              Academic leadership supporting and guiding the hackathon
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6 sm:gap-12 max-w-3xl mx-auto items-stretch justify-items-stretch">
-            {facultyToRender.map((f, i) => (
-              <PersonCard key={i} index={i} person={f} showCompany={false} />
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-6 sm:gap-10 max-w-6xl mx-auto items-stretch justify-items-stretch">
+            {facultyTeam.map((f, i) => (
+              <PersonCard key={i} index={i} person={f} showCompany />
             ))}
           </div>
         </div>
@@ -403,7 +445,6 @@ export default function JudgesSection() {
         .card-anim:hover::before, .card-anim:hover::after { opacity:1; }
         .card-anim .img-wrap { transform: translate3d(var(--imgx,0), var(--imgy,0), 0); }
 
-        /* Softer section title glow */
         .glow-text,
         .glow-text-purple,
         .glow-text-pink {
@@ -412,7 +453,6 @@ export default function JudgesSection() {
             0 0 22px rgba(106, 13, 173, 0.14);
         }
 
-        /* keep rows even + add breathing space on small screens */
         @media (max-width: 639px) {
           #judges .grid { grid-auto-rows: 1fr; }
         }
