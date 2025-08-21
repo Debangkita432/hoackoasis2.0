@@ -24,7 +24,7 @@ export default function ScheduleSection() {
     },
     {
       time: "10:00 AM",
-      title: "Hacking Begins!",
+      title: "Hackathon Begins!",
       description: "Teams start working on their projects",
       icon: Clock,
     },

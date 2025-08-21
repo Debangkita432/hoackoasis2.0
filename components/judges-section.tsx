@@ -65,8 +65,17 @@ export default function JudgesSection() {
       company: "Delivery Manager at Cognizant",
       image: "/susmit.jpeg",
       linkedin:
-        "https://www.linkedin.com/in/arpan-singha-itil-%C2%AE-certified-agile-pm-safe%C2%AE-35a80368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "https://www.linkedin.com/in/susmitghosh/",
     },
+
+            {
+      name: "Subhajit Paul,",
+      title: "Judge",
+      company: "Delivery Manager at Cognizant",
+      image: "/subhajit.jpeg",
+     
+    },
+    
   ]
 
   const mentors: PersonBase[] = [
