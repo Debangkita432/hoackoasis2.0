@@ -59,6 +59,14 @@ export default function JudgesSection() {
       linkedin:
         "https://www.linkedin.com/in/arpan-singha-itil-%C2%AE-certified-agile-pm-safe%C2%AE-35a80368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
+        {
+      name: "Susmit Ghosh",
+      title: "Judge",
+      company: "Delivery Manager at Cognizant",
+      image: "/susmit.jpeg",
+      linkedin:
+        "https://www.linkedin.com/in/arpan-singha-itil-%C2%AE-certified-agile-pm-safe%C2%AE-35a80368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ]
 
   const mentors: PersonBase[] = [
@@ -76,6 +84,7 @@ export default function JudgesSection() {
       linkedin:
         "https://www.linkedin.com/in/sayan-bardhan-00405a199/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
+    
   ]
 
   // Faculty Team (Chief Patron → Patron → Coordinator → Coordinator)
