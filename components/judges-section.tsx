@@ -38,7 +38,7 @@ export default function JudgesSection() {
     {
       name: "Pinaki Karuri",
       title: "Judge",
-      company: "Manager(Projects) of General Insurance Application at cognizant",
+      company: "Manager (Projects), General Insurance Applications at Cognizant",
       image: "/pinaki.png",
       linkedin:
         "https://www.linkedin.com/in/pinaki-karuri-b3a62b1a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -46,7 +46,7 @@ export default function JudgesSection() {
     {
       name: "Sourav K Chatterjee",
       title: "Judge",
-      company: "Senior Manager & Delivery Lead, Solution Architect at accenture",
+      company: "Senior Manager & Delivery Lead, Solution Architect at Accenture",
       image: "/sourav.png",
       linkedin:
         "https://www.linkedin.com/in/souravkchatterjee777/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -59,23 +59,19 @@ export default function JudgesSection() {
       linkedin:
         "https://www.linkedin.com/in/arpan-singha-itil-%C2%AE-certified-agile-pm-safe%C2%AE-35a80368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-        {
+    {
       name: "Susmit Ghosh",
       title: "Judge",
       company: "Delivery Manager at Cognizant",
       image: "/susmit.jpeg",
-      linkedin:
-        "https://www.linkedin.com/in/susmitghosh/",
+      linkedin: "https://www.linkedin.com/in/susmitghosh/",
     },
-
-            {
+    {
       name: "Subhajit Paul",
       title: "Judge",
-      company: "Subhajit Paul, Experienced Oracle Applications E-Business Suite (EBS) professional with over 20 years of experience.",
+      company: "Senior Oracle E-Business Suite (EBS) Professional — 20+ years",
       image: "/subhajit.jpeg",
-     
     },
-    
   ]
 
   const mentors: PersonBase[] = [
@@ -93,7 +89,6 @@ export default function JudgesSection() {
       linkedin:
         "https://www.linkedin.com/in/sayan-bardhan-00405a199/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    
   ]
 
   // Faculty Team (Chief Patron → Patron → Coordinator → Coordinator)
@@ -359,9 +354,16 @@ export default function JudgesSection() {
               Industry experts who will evaluate your innovative projects
             </p>
           </div>
+
+          {/* Grid with centering for the last two items on lg screens */}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-6 sm:gap-10 items-stretch justify-items-stretch">
             {judges.map((judge, i) => (
-              <PersonCard key={i} index={i} person={judge} />
+              <div
+                key={i}
+                className={`${i >= judges.length - 2 ? "lg:col-span-2 flex justify-center" : ""}`}
+              >
+                <PersonCard index={i} person={judge} />
+              </div>
             ))}
           </div>
         </div>
