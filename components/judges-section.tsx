@@ -69,9 +69,9 @@ export default function JudgesSection() {
     },
 
             {
-      name: "Subhajit Paul,",
+      name: "Subhajit Paul",
       title: "Judge",
-      company: "Delivery Manager at Cognizant",
+      company: "Subhajit Paul, Experienced Oracle Applications E-Business Suite (EBS) professional with over 20 years of experience.",
       image: "/subhajit.jpeg",
      
     },
